@@ -1,8 +1,10 @@
-
+import Chai from "./Chai.js";
 
 function App() {
   return (
-    <h1>Chai aur React | Shahbaz Ahmad</h1>
+    <>
+    <Chai />
+    </>
   );
 }
 

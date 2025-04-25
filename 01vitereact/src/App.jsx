@@ -1,7 +1,15 @@
+import Chai from "./Chai.jsx";
+
 function App() {
 
+  const username = "Shahabaz";
+
   return (
-    <h1>Chai aur React with Vite | Shahbaz Ahmad</h1>
+  <>  
+   <Chai />
+   <h1>Hello World {username}</h1>
+   <p>This is a paragraph</p>
+   </>
   )
 }
 
