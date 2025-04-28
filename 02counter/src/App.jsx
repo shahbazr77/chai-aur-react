@@ -14,7 +14,13 @@ function App() {
   function addValue(){
     // console.log("add Value",Math.random());
    if(custom_counter<20){
-    setCustom_counter(custom_counter+1);
+    //setCustom_counter(custom_counter+1);
+    // // setCustom_counter(custom_counter+1);
+    // // setCustom_counter(custom_counter+1);
+     setCustom_counter(prevCounter => prevCounter+1);
+     setCustom_counter(prevCounter => prevCounter+1);
+     setCustom_counter(prevCounter => prevCounter+1);
+     
    }else{
     alert("Counter is maxed out");
    }
