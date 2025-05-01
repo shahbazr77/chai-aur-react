@@ -62,6 +62,11 @@ const copyPasswordToClipboard = useCallback(() => {
           <label htmlFor='charInput'>Characters</label>
         </div>
         </div>
+
+
+         <button className='w-full  text-white px-3 py-2 rounded-lg bg-amber-600'>Test Button</button>
+
+
       </div>      
     
     </>
