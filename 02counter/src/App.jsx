@@ -1,6 +1,4 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
@@ -11,15 +9,21 @@ function App() {
 
   let counter = 15;
 
+  alert(custom_counter);
+
   function addValue(){
     // console.log("add Value",Math.random());
    if(custom_counter<20){
+     
+    
+
+
     //setCustom_counter(custom_counter+1);
     // // setCustom_counter(custom_counter+1);
     // // setCustom_counter(custom_counter+1);
+     //setCustom_counter(prevCounter => prevCounter+1);
      setCustom_counter(prevCounter => prevCounter+1);
-     setCustom_counter(prevCounter => prevCounter+1);
-     setCustom_counter(prevCounter => prevCounter+1);
+     console.log(setCustom_counter(prevCounter => prevCounter+1));
      
    }else{
     alert("Counter is maxed out");

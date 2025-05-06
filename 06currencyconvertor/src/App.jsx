@@ -12,7 +12,7 @@ function App() {
   const options = Object.keys(currencyInfo);
 
 
-
+ 
 
   const swap =()=>{
     setFrom(to);
@@ -29,7 +29,7 @@ function App() {
 
   return (
     <>
-     <div className="w-full h-screen flex flex-werp justify-center items-center bg-cover bg-no-repeat" style={{backgroundImage: `url('https://images.pexels.com/photos/534216/pexels-photo-534216.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')`}}>
+     <div className="w-full h-screen flex flex-werp justify-center items-center bg-cover bg-no-repeat" style={{backgroundImage: `url('https://images.pexels.com/photos/27288569/pexels-photo-27288569/free-photo-of-a-stock-chart-with-green-and-red-lines.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')`}}>
        <div className="w-full">
         <div className="w-full max-w-md mx-auto border border-gray-60 rounded-lg p-5 backdrop-blur-sm bg-white/30">
          <form onSubmit={(e) =>{ e.preventDefault() }}>
@@ -38,8 +38,9 @@ function App() {
             label="From" 
             amount={amount}
             currencyOptions={options}
-            onCurrencyChange={(currency)=>setAmount(Number(amount))}
-            onAmountChange={(amount)=>setAmount(Number(amount))}
+            onCurrencyChange={(currency) => setFrom(currency)}
+            onAmountChange={(amount) => setAmount(amount)}
+            selectCurrency={from}
             />  
           </div>
           <div className="relative w-full h-0.5">
@@ -52,12 +53,12 @@ function App() {
             label="To" 
             amount={convertedAmount}
             currencyOptions={options}
-            onCurrencyChange={(currency)=>setTo(Number(currency))}
-            selectCurrency={from}
+            onCurrencyChange={(currency) => setTo(currency)}
+            selectCurrency={to}
             amountDisabled
             />  
           </div>
-          <button type="submit" onClick={convert} className="w-full bg-blue-600 text-white px-4 py-3 rounded-lg">Convert {from.toUpperCase()} to {to.toUpperCase()}</button>
+          <button type="submit" onClick={convert} className="w-full bg-blue-600 text-white px-4 py-3 rounded-lg">Convert {from} to {to}</button>
          </form>
         </div>
 

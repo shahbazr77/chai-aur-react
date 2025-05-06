@@ -10,6 +10,8 @@ function App() {
   //userRef
   const passwordRef = useRef(null);
 
+
+
 const passwordGenerator = useCallback(() => {
   let pass = '';
   let str = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
@@ -17,12 +19,20 @@ const passwordGenerator = useCallback(() => {
   if(charAllowed) str += '!@#$%^&*()_+-=[]{}|;:,.<>?~';
 
   for(let i=1;i <= length;i++){
-    let char = Math.floor(Math.random() * str.length + 1);
-    pass += str.charAt(char);
+    let rand = Math.random();
+    // console.log('i',i);
+    // console.log('str.length',str.length);
+    // console.log('Math.random()',rand);
+    // console.log('Math.random() * str.length + 1====',rand * str.length + 1);
+    // console.log('Math.random() * str.length + 1 fllor====',Math.floor(rand * str.length + 1));
+    // console.log(str.charAt(1));
+     let char = Math.floor(rand * str.length + 1);
+     pass += str.charAt(char);
 
   }
+  
   setPassword(pass);
-}, [length, numberAllowed, charAllowed,setPassword]);
+}, [length, numberAllowed, charAllowed]);
 
 useEffect(() =>{
   passwordGenerator();

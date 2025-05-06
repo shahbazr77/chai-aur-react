@@ -1,6 +1,4 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 import Card from './components/Card.jsx';
 
@@ -8,9 +6,15 @@ function App() {
   const [count, setCount] = useState(0);
 
   let myObj ={
-    username : "shahbaz",
+    user : "shahbaz",
     age : 20,
-    city : "karachi"
+    city : "Lahore"
+  }
+
+  let myObj2 ={
+    user : "Waqas Object",
+    age : 20,
+    city : "Islamabad"
   }
 
   return (
@@ -19,8 +23,8 @@ function App() {
     Tailwind Test
   </h1>
   
-  <Card userName="Shahbaz Ahmad" buttonText="Clicke me" someObj={myObj}/>
-  <Card userName="Waqas Ahmad" buttonText="Vist me"/>
+  <Card userName="Shahbaz Ahmad" buttonText="Clicke me666" someObj={myObj}/>
+  <Card userName="Waqas Ahmad" buttonText="Vist me" someObj={myObj2}/>
 
   </>
     
